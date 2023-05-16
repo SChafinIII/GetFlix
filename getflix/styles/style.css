@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
- // basic body information using @apply with background and overflow   
+ /* basic body information using @apply with background and overflow    */
 }
 
 #__next {
