@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
   }
 }

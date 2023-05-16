@@ -1,9 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, IndexRoute  } from 'react-router-dom';
+import './tailwind.config.js';
+
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" class="bg-blue">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
