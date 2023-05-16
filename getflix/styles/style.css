@@ -1,0 +1,15 @@
+@tailwind base; 
+@tailwind components;
+@tailwind utilities;
+
+body {
+ // basic body information using @apply with background and overflow   
+}
+
+#__next {
+    @apply h-full;
+}
+
+html {
+    @apply h-full;
+}
