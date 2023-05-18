@@ -2,8 +2,8 @@ interface InfoModalProps {
     onClose: any;
 }
 const InfoModal: React.FC<InfoModalProps> = ({onClose}) => {
-    const movies = useAppSelector(state => state.movies);
-    const dispatch = useAppDispatch();
+    const movies = appUseSelector(state => state.movies);
+    const dispatch = appUseDispatch();
     const router = useRouter();
 
 
