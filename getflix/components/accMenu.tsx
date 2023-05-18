@@ -1,14 +1,14 @@
 import { signOut } from "next-auth/react";
 import React from 'react';
 
-import { useAppSelector } from "../storage/index";
+import { appUseSelector } from "../storage/index";
 
 interface AccountMenuProps {
   visible?: boolean;
 }
 
 const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
-  const currentUser = useAppSelector((state) => state.profile.profile);
+  const currentUser = appUseSelector((state) => state.profile.profile);
 
   if (!visible) {
     return null;
