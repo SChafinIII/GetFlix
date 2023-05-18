@@ -4,7 +4,6 @@ import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
 import  profileSlice  from './profiles';
 import  movieSlice  from './movies';
-import { use } from 'express/lib/application';
 
 const store = configureStore({
     reducer: {
