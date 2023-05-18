@@ -1,6 +1,6 @@
 import useSwr from 'swr'
 import { appUseSelector} from "../storage/index";
-import {MovieState} from "../storage/movies"; 
+import { MovieState } from "../storage/movies"; 
 
 import fetcher from '../libs/fetcher';
 
