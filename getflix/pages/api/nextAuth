@@ -4,9 +4,9 @@ import GoogleProvider from 'next-auth/providers/google';
 import Credentials from 'next-auth/providers/credentials';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { compare } from 'bcrypt';
-import prismadb from '../../../libs/prismadb';
+import prismadb from '../../libs/prismadb';
 
-export const authOptions = {
+const authOptions: AuthOptions = {
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID || '',
@@ -43,7 +43,7 @@ export const authOptions = {
         }
 
         const isCorrectPassword = await compare(credentials.password, user.hashedPassword);
-          console.log(isCorrectPassword);
+        console.log(isCorrectPassword);
         if (!isCorrectPassword) {
           throw new Error('Incorrect password');
         }

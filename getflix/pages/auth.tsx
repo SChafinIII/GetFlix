@@ -7,7 +7,7 @@ import Input from "../components/input";
 
 import {FcGoogle} from 'react-icons/fc';
 import {FaGithub} from "react-icons/fa"
-import { sign } from 'crypto';
+// import { sign } from 'crypto';
 
 const Auth: NextPage = () => {
     const [username, setUsername] = useState("");

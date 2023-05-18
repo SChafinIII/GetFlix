@@ -1,19 +1,18 @@
-
 import React, { useEffect } from 'react';
 import Head from "next/head";
-import type { NextPage, NextPageContext } from 'next';
+import { NextPage, NextPageContext } from 'next';
 import { getSession, signOut } from "next-auth/react";
-import { profileActions } from "../../storage/profiles";
-import { movieActions } from "../../storage/movies";
-import { appUseDispatch } from "../../storage/index";
-import useCurrentUser from "../../hooks/useCurrentUser";
-import useMovieList from "../../hooks/useMovieList";
-import useFavorites from "../../hooks/useFavorites";
+import { profileActions } from "../storage/profiles";
+import { movieActions } from "../storage/movies";
+import { appUseDispatch } from "../storage/index";
+import useCurrentUser from "../hooks/useCurrentUser";
+import useMovieList from "../hooks/useMovieList";
+import useFavorites from "../hooks/useFavorites";
 
-import Navbar from '../components/Navbar';
-import Billboard from '../components/Billboard';
-import MovieList from "../components/MovieList";
-import InfoModal from '../components/InfoModal';
+import Navbar from '../components/naviBar';
+import Billboard from '../components/board';
+import MovieList from "../components/movieList";
+import InfoModal from '../components/iModal';
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -23,12 +22,12 @@ export async function getServerSideProps(context: NextPageContext) {
         destination: '/auth',
         permanent: false,
       }
-    }
+    };
   }
 
   return {
     props: {}
-  }
+  };
 }
 
 const Home: NextPage = () => {
@@ -67,6 +66,6 @@ const Home: NextPage = () => {
       </>
     );
   }
-}
+};
 
 export default Home;
