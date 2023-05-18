@@ -3,12 +3,12 @@ import React, { useEffect } from 'react';
 import Head from "next/head";
 import type { NextPage, NextPageContext } from 'next';
 import { getSession, signOut } from "next-auth/react";
-import { profileActions } from "../storage/profiles";
-import { movieActions } from "../storage/movies";
-import { useAppDispatch } from "../storage/index";
-import useCurrentUser from "../hooks/useCurrentUser";
-import useMovieList from "../hooks/useMovieList";
-import useFavorites from "../hooks/useFavorites";
+import { profileActions } from "../../storage/profiles";
+import { movieActions } from "../../storage/movies";
+import { appUseDispatch } from "../../storage/index";
+import useCurrentUser from "../../hooks/useCurrentUser";
+import useMovieList from "../../hooks/useMovieList";
+import useFavorites from "../../hooks/useFavorites";
 
 import Navbar from '../components/Navbar';
 import Billboard from '../components/Billboard';
@@ -32,7 +32,7 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 const Home: NextPage = () => {
-  const dispatch = useAppDispatch();
+  const dispatch = appUseDispatch();
   const { data: currentUser } = useCurrentUser();
   const { data: moviesList = [] } = useMovieList();
   const { data: favorites = [] } = useFavorites();

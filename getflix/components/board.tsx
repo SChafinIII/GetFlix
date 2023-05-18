@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
-import { useAppSelector, useAppDispatch } from "../storage/index";
+import { appUseSelector, appUseDispatch } from "../storage/index";
 import { movieActions } from "../storage/movies";
 import { useGetMovie } from "../hooks/useMovieList";
 import PlayButton from "./PlayButton";
@@ -8,10 +8,10 @@ import PlayButton from "./PlayButton";
 const RANDOM_NUMBER = Math.floor(Math.random() * 4);
 
 const Billboard: React.FC = () => {
-    const moviesList = useAppSelector((state) => state.movies.movies);
+    const moviesList = appUseSelector((state) => state.movies.movies);
     const randomMovie = moviesList ? moviesList[RANDOM_NUMBER] : undefined;
 
-    const dispatch = useAppDispatch();
+    const dispatch = appUseDispatch();
     const getMovie = useGetMovie();
 
     function clickInfoHandler(e: React.MouseEvent<HTMLButtonElement>) {

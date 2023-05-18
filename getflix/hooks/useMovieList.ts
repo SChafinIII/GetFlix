@@ -1,6 +1,6 @@
 import useSwr from 'swr'
-import { useAppSelector} from "../store/index";
-import {movieState} from "../store/movies" 
+import { appUseSelector} from "../storage/index";
+import {MovieState} from "../storage/movies"; 
 
 import fetcher from '../libs/fetcher';
 
@@ -19,7 +19,7 @@ const useMovieList = () => {
 };
 
 export function useGetMovie(){
-  const movies = useAppSelector(state => state.movies.movies)
+  const movies = appUseSelector(state => state.movies.movies)
 
   return (id: string) => {
     const movie = movies.filter(movie => movie.id === id)
