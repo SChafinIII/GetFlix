@@ -9,9 +9,9 @@ interface InputProps {
 
 const Input: React.FC<InputProps> = ({
     id,
+    label,
     onChange,
     type,
-    label,
     value,
 }) => {
     return (
