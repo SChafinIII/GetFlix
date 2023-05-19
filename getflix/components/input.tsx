@@ -6,7 +6,6 @@ interface InputProps {
     type?: string;
     value: string;
 }
-
 const Input: React.FC<InputProps> = ({
     id,
     label,
@@ -30,5 +29,6 @@ const Input: React.FC<InputProps> = ({
           </label>
         </div>
       );
-}\
+};
+
 export default Input;
