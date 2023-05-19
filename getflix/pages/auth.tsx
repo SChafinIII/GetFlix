@@ -3,11 +3,10 @@ import axios from 'axios';
 import { useCallback, useState } from "react";
 import type { NextPage } from 'next'
 import {signIn} from "next-auth/react"
-import Input from "../components/MobileMenu";
+// import Input from "../components/MobileMenu";
 
 import {FcGoogle} from 'react-icons/fc';
 import {FaGithub} from "react-icons/fa"
-// import { sign } from 'crypto';
 
 const Auth: NextPage = () => {
     const [username, setUsername] = useState("");
@@ -103,8 +102,8 @@ const Auth: NextPage = () => {
                         </h2>
                         <div className="flex flex-col gap-4 sm:gap-4">
                             {variant === 'register' &&  
-                            <Input
-                                label="Username"
+                            <input
+                                // label="Username"
                                 onChange={(e: React.ChangeEvent<HTMLInputElement> ) => { setUsername(e.target.value); }}
                                 id="username"
                                 type="text"
@@ -112,18 +111,18 @@ const Auth: NextPage = () => {
                             />}
                            
 
-                            <Input
-                                label="Email"
+                            <input
+                                // label="Email"
                                 onChange={(e: React.ChangeEvent<HTMLInputElement> ) => { setEmail(e.target.value); }}
                                 id="email"
                                 type="email"
                                 value={email}
                             />
 
-                            <Input
-                                label="Password"
+                            <input
+                                // label="Password"
                                 onChange={(e: React.ChangeEvent<HTMLInputElement> ) => { setPassword(e.target.value); }}
-                                id="passowrd"
+                                id="password"
                                 type="password"
                                 value={password}
                             />

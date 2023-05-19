@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
- /* basic body information using @apply with background and overflow    */
+    @apply bg-zinc-900 h-full overflow-x-hidden
 }
 
 #__next {

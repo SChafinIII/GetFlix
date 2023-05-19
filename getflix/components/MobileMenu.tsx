@@ -1,9 +1,14 @@
 import React from "react"
 interface MobileMenuProps {
     visible: boolean;
+    label: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    id: string;
+    type: string
+    value: string;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({visible}) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({visible}) => { 
     if(!visible){
         return null;
     }
