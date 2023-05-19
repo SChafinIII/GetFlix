@@ -1,11 +1,11 @@
-import useSwr from 'swr'
-import { appUseSelector} from "../storage/index";
+import useSwr from 'swr';
+import { appUseSelector } from "../storage/index";
 import { MovieState } from "../storage/movies"; 
 
 import fetcher from '../libs/fetcher';
 
 const useMovieList = () => {
-  const { data, error, isLoading} = useSwr('/api/movies', fetcher, {
+  const { data, error, isLoading } = useSwr('/api/movies', fetcher, {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false,
@@ -15,16 +15,16 @@ const useMovieList = () => {
     data,
     error,
     isLoading,
-  }
+  };
 };
 
-export function useGetMovie(){
-  const movies = appUseSelector(state => state.movies.movies)
+export function useGetMovie() {
+  const movies = appUseSelector(state => state.movies.movies);
 
-  return (id: string) => {
-    const movie = movies.filter(movie => movie.id === id)
+  return (id) => {
+    const movie = movies.filter(movie => movie.id === id);
     return movie;
-  }
+  };
 }
 
 export default useMovieList;
