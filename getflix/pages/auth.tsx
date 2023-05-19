@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useCallback, useState } from "react";
 import type { NextPage } from 'next'
 import {signIn} from "next-auth/react"
-import Input from "../components/input";
+import Input from "../components/MobileMenu";
 
 import {FcGoogle} from 'react-icons/fc';
 import {FaGithub} from "react-icons/fa"
@@ -168,7 +168,7 @@ const Auth: NextPage = () => {
 
 
                         <p className="text-neutral-500 mt-8 sm:mt-6">
-                        {variant === 'login' ? 'First time using Netflix?' : 'Already have an account?'} 
+                        {variant === 'login' ? 'First time using Rickflix?' : 'Already have an account?'} 
                             <span onClick={toggleVariant} className="text-white ml-1 hover:underline cursor-pointer">
                                 {variant === 'login' ? 'Create an account': 'Login' }
                             </span>

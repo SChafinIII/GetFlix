@@ -1,6 +1,6 @@
 import useSwr from 'swr'
 
-import fetcher from add fetcher import;
+import fetcher from '../libs/fetcher';
 
 const useBillboard = () => {
   const { data, error, isLoading} = useSwr('/api/random', fetcher, {

@@ -11,8 +11,8 @@ import useFavorites from "../hooks/useFavorites";
 
 import Navbar from '../components/naviBar';
 import Billboard from '../components/board';
-import MovieList from "../components/movieList";
-import InfoModal from '../components/iModal';
+import MovieList from "../components/MovieList";
+import InfoModal from '../components/InfoModal';
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
