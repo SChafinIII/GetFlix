@@ -1,14 +1,29 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./src/**/*.{html,js}'],
   theme: {
-    extend: {},
+    //
+    colors: {
+      'blue': '#3b82f6',
+      'purple': '#a855f7',
+      'pink': '#d946ef',
+      'red': '#f43f5e',
+      'green': '#a3e635',
+      'yellow': '#fde047',
+      'black': '#0a0a0a',
+      'white': '#fafafa',
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      spacing: {
+        '8xl': '96rem',
+        '9xl': '128rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
   },
-  plugins: [
-    require('tailwind-scrollbar-hide')
-  ],
 }
