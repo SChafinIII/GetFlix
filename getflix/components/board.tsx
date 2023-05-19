@@ -3,7 +3,7 @@ import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { appUseSelector, appUseDispatch } from "../storage/index";
 import { movieActions } from "../storage/movies";
 import { useGetMovie } from "../hooks/useMovieList";
-import PlayButton from "./PlayButton";
+// import PlayButton from "./PlayButton";
 
 const RANDOM_NUMBER = Math.floor(Math.random() * 4);
 
