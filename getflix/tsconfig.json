@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/board.tsx", , "components/favButton.tsx""components/accMenu.tsx", "components/InfoModal.tsx", "components/MobileMenu.tsx", "components/input.js", "components/movieList.tsx", "components/movieCard.tsx", "components/naviBar.tsx", "components/play.tsx", "components/naviBarItems.tsx"  ],
+, "components/board.tsx", "components/favButton.tsx", "components/accMenu.tsx", "components/InfoModal.tsx", "components/MobileMenu.tsx", "components/input.js", "components/movieList.tsx", "components/movieCard.tsx", "components/naviBar.tsx", "components/play.tsx", "components/naviBarItems.tsx"  ],
   "exclude": [
     "node_modules"
   ]
